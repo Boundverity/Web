@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Boundverity | AI security, integration and governance consulting</title>
-<meta name="description" content="Boundverity Technologies Ltd is a UK company developing specialist consulting services in AI security, secure integration, workflow automation and governance.">
+<meta name="description" content="Boundverity Technologies Ltd is a UK company developing specialist consulting in AI adoption, AI security, secure integration and governance.">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
@@ -32,9 +32,7 @@
 * { box-sizing: border-box; }
 body { margin: 0; }
 img { max-width: 100%; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
-button { font: inherit; }
-a, button { -webkit-tap-highlight-color: transparent; }
+html { scroll-behavior: smooth; }
 body {
   background: var(--bg);
   color: var(--body);
@@ -42,7 +40,7 @@ body {
   font-weight: 300;
   font-size: 15px;
   line-height: 1.65;
-  padding-block: 0;
+  padding-block: 20px 0;
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
   -webkit-font-smoothing: antialiased;
@@ -60,17 +58,9 @@ p { margin: 0; }
 
 /* Header */
 .top {
-  position: sticky; top: 0; z-index: 30; background: var(--bg);
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
-  padding-top: calc(20px + env(safe-area-inset-top, 0px)); padding-bottom: 16px; border-bottom: 1px solid var(--line);
+  padding-block: 8px 20px; border-bottom: 1px solid var(--line);
 }
-.menu-btn {
-  display: none; align-items: center; min-height: 44px; padding: 0 20px; background: transparent; color: var(--ink);
-  border: 1px solid #D4D4D4; border-radius: 9999px; cursor: pointer;
-  font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 400;
-}
-.menu-btn[aria-expanded="true"] { border-color: var(--accent); color: var(--accent); }
-.nav-contact { display: none; }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 .brand img { width: 34px; height: auto; display: block; }
 .brand span { font-family: var(--serif); font-size: 26px; font-weight: 300; letter-spacing: -0.02em; color: var(--ink); }
@@ -112,65 +102,59 @@ section.row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3fr
 .cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 40px; }
 .cols.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .cols h3 { font-size: 22px; line-height: 28px; letter-spacing: -0.015em; margin-bottom: 10px; }
+.cols .n { display: block; margin-bottom: 12px; }
 .cols > div { border-top: 1px solid var(--ink); padding-top: 18px; min-width: 0; }
+
+dl.parts { margin: 40px 0 0; display: grid; gap: 0; }
+dl.parts > div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 24px; padding-block: 16px; border-top: 1px solid var(--line); }
+dl.parts dt { color: var(--ink); font-weight: 400; }
+dl.parts dd { margin: 0; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+.tags span { border: 1px solid #D4D4D4; border-radius: 9999px; padding: 6px 14px; font-size: 13px; color: var(--ink); }
+
+.person h3 { font-size: 26px; line-height: 30px; margin-bottom: 4px; }
+.person .role { display: block; margin-bottom: 14px; color: var(--accent); }
+
+.status { background: #FAF7F5; padding: 28px; margin-top: 32px; max-width: 46em; }
+.status li { margin-top: 8px; }
+.status ul { margin: 0; padding-left: 18px; }
 
 .contact dl { margin: 32px 0 0; display: grid; gap: 0; }
 .contact dl > div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3fr); gap: 24px; padding-block: 16px; border-top: 1px solid var(--line); }
 .contact dt { color: var(--muted); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 400; padding-top: 4px; }
 .contact dd { margin: 0; color: var(--ink); font-size: 18px; word-break: break-word; }
 .contact dd a { text-decoration-color: var(--accent); text-underline-offset: 4px; }
-.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-.pill.ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1px #D4D4D4; }
-.pill.ghost:hover { background: transparent; color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.contact .pill { margin-top: 28px; }
 
 footer { border-top: 1px solid var(--line); padding-block: 32px 40px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px 40px; font-size: 13px; color: var(--muted); }
 footer p { max-width: 46em; }
+
+/* Social icons */
+.social { display: flex; flex-wrap: wrap; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.social a { width: 40px; height: 40px; border: 1px solid #D4D4D4; border-radius: 9999px; display: inline-flex; align-items: center; justify-content: center; color: var(--ink); transition: color 150ms ease, border-color 150ms ease, background 150ms ease; }
+.social a:hover { color: #fff; background: var(--accent); border-color: var(--accent); }
+.social svg { width: 18px; height: 18px; display: block; }
+footer .social a { width: 36px; height: 36px; }
 
 [data-anim] { opacity: 0; transform: translateY(12px); transition: opacity 900ms ease, transform 900ms ease; }
 [data-anim].in { opacity: 1; transform: none; }
 
 @media (max-width: 960px) {
-  .hero { grid-template-columns: minmax(0, 1fr); padding-bottom: 48px; }
+  .hero { grid-template-columns: minmax(0, 1fr); }
   .side { order: -1; gap: 28px; }
   .panel { aspect-ratio: 1 / 1; }
-  .pill-head { display: none; }
-  .menu-btn { display: inline-flex; }
-  .nav {
-    display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0;
-    background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: 0 24px 40px -24px rgba(10, 10, 10, 0.25);
-    padding-bottom: 8px;
-  }
-  .nav.open { display: flex; }
-  .nav a { display: flex; align-items: center; min-height: 52px; font-size: 13px; color: var(--ink); border-top: 1px solid var(--line); }
-  .nav a:first-child { border-top: 0; }
-  .nav .nav-contact { display: flex; color: var(--accent); }
-  section.row { grid-template-columns: minmax(0, 1fr); gap: 16px; padding-block: 44px; scroll-margin-top: 96px; }
+  .nav { display: none; }
+  section.row { grid-template-columns: minmax(0, 1fr); gap: 16px; padding-block: 44px; }
   .cols, .cols.two { grid-template-columns: minmax(0, 1fr); gap: 28px; }
-  .contact dl > div { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  dl.parts > div, .contact dl > div { grid-template-columns: minmax(0, 1fr); gap: 4px; }
 }
 @media (max-width: 520px) {
-  body { font-size: 16px; }
-  .top { padding-top: calc(14px + env(safe-area-inset-top, 0px)); padding-bottom: 12px; }
-  .brand img { width: 30px; }
   .brand span { font-size: 22px; }
-  .hero { gap: 24px; padding-block: 20px 40px; }
-  .side h1, .row h2 { font-size: 30px; line-height: 34px; }
-  .side .lead { margin-top: 20px; }
-  .link { min-height: 44px; margin-top: 12px; font-size: 15px; }
-  .panel { aspect-ratio: 4 / 5; min-height: 0; }
-  .panel .kicker { left: 20px; top: 20px; right: 20px; font-size: 26px; line-height: 30px; }
-  .card { width: 86%; padding: 20px 16px 4px 0; }
-  .card .label { margin-bottom: 12px; }
+  .panel .kicker { left: 20px; top: 20px; font-size: 26px; line-height: 30px; }
+  .card { width: 82%; padding-right: 16px; }
   .card h2 { font-size: 26px; line-height: 30px; }
-  section.row { padding-block: 36px; }
-  .row .intro { margin-top: 16px; }
-  .cols { margin-top: 28px; }
-  .cols h3 { font-size: 21px; }
-  .contact dd { font-size: 17px; }
-  .contact dl > div { padding-block: 14px; }
-  .actions { flex-direction: column; }
-  .actions .pill { justify-content: center; min-height: 52px; }
-  footer { flex-direction: column; padding-block: 28px calc(32px + env(safe-area-inset-bottom, 0px)); }
+  .side h1, .row h2 { font-size: 30px; line-height: 34px; }
+  .pill { padding: 10px 16px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -180,69 +164,70 @@ footer p { max-width: 46em; }
 </head>
 <body>
 <div class="wrap">
-  <header class="top" id="site-header">
+  <header class="top">
     <a class="brand" href="#top" aria-label="Boundverity home">
       <img src="logo.png" alt="" width="34" height="33">
       <span>Boundverity</span>
     </a>
-    <nav class="nav" id="nav" aria-label="Main">
-      <a href="#about">About</a>
+    <nav class="nav" aria-label="Main">
       <a href="#services">Services</a>
       <a href="#approach">Approach</a>
-      <a class="nav-contact" href="#contact">Contact</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <a class="pill pill-head" href="#contact">Contact <span aria-hidden="true">→</span></a>
-    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <a class="pill" href="#contact">Contact <span aria-hidden="true">→</span></a>
   </header>
 
   <main id="top">
     <div class="hero">
       <div class="panel">
         <canvas id="field" aria-hidden="true"></canvas>
-        <div class="kicker" data-anim>Specialist consulting in AI security and integration</div>
+        <div class="kicker" data-anim>AI adoption, security and governance consulting</div>
         <div class="card" data-anim>
           <span class="label">Gateshead · United Kingdom</span>
-          <h2>Introduce AI agents with the right controls in place.</h2>
+          <h2>Introduce AI agents and tools with the right controls in place.</h2>
         </div>
       </div>
       <div class="side">
         <div data-anim>
-          <h1>AI adoption, automation and security for your organisation</h1>
+          <h1>Specialist consulting in AI security, secure integration and workflow automation</h1>
           <p class="lead">Boundverity Technologies Ltd is a UK company developing specialist consulting services in AI security, secure integration, workflow automation and governance.</p>
-          <a class="link" href="#services">Explore our services <span aria-hidden="true">→</span></a>
+          <a class="link" href="#services">See our services <span aria-hidden="true">→</span></a>
         </div>
-        <p class="label" data-anim>Working with organisations across industries.</p>
+        <p class="label" data-anim>For organisations across industries introducing AI agents and tools into their operations.</p>
       </div>
     </div>
 
-    <section class="row" id="about">
-      <p class="label">About</p>
+    <section class="row" id="focus">
+      <p class="label">Who we work with</p>
       <div>
-        <h2>For organisations bringing AI agents and tools into their operations.</h2>
-        <p class="intro">We focus on organisations across industries that want to introduce AI agents and tools into their work, including systems that access internal documents, connect to business applications or take actions on behalf of employees.</p>
-        <p class="intro">Our approach centres on your own workflows, policies and risk priorities, so the advice fits how your organisation actually operates.</p>
+        <h2>Organisations introducing AI agents and tools into their operations.</h2>
+        <p class="intro">We focus on organisations across industries looking to introduce AI agents and tools into their operations, including systems that access internal documents, connect to business applications or take actions on behalf of employees.</p>
       </div>
     </section>
 
     <section class="row" id="services">
       <p class="label">Services</p>
       <div>
-        <h2>Four areas, built around how organisations adopt AI.</h2>
-        <p class="intro">Our services are being developed around the following areas.</p>
+        <h2>Four areas, built around how AI is actually used in your organisation.</h2>
+        <p class="intro">Our services are being developed around four areas.</p>
         <div class="cols two">
           <div data-anim>
+            <span class="label n">01</span>
             <h3>AI adoption and workflow automation</h3>
             <p>Supporting organisations across industries to identify suitable use cases, integrate AI agents and other AI tools, and introduce automated workflows tailored to their business needs.</p>
           </div>
           <div data-anim>
+            <span class="label n">02</span>
             <h3>AI security assessments</h3>
             <p>Examining permissions, data access, connected tools, approval controls and failure handling.</p>
           </div>
           <div data-anim>
+            <span class="label n">03</span>
             <h3>Secure integration</h3>
             <p>Helping organisations design appropriate access restrictions, human oversight, logging and recovery procedures.</p>
           </div>
           <div data-anim>
+            <span class="label n">04</span>
             <h3>Governance and assurance</h3>
             <p>Documenting controls, responsibilities and assessment evidence to support applicable regulatory requirements and ongoing review.</p>
           </div>
@@ -254,28 +239,10 @@ footer p { max-width: 46em; }
       <p class="label">Our approach</p>
       <div>
         <h2>Centred on your workflows, policies and risk priorities.</h2>
-        <div class="cols">
-          <div data-anim>
-            <h3>Clear findings</h3>
-            <p>Plain statements of what we found, so decision-makers can act on them.</p>
-          </div>
-          <div data-anim>
-            <h3>Practical remediation</h3>
-            <p>Recommendations your teams can put into practice.</p>
-          </div>
-          <div data-anim>
-            <h3>Explicit limitations</h3>
-            <p>Every assessment states what it did and did not cover.</p>
-          </div>
+        <p class="intro">Our approach centres on the organisation’s own workflows, policies and risk priorities, with clear findings, practical remediation recommendations and explicit assessment limitations.</p>
+        <div class="tags" aria-label="What you can expect">
+          <span>Clear findings</span><span>Practical remediation recommendations</span><span>Explicit assessment limitations</span>
         </div>
-      </div>
-    </section>
-
-    <section class="row" id="conversations">
-      <p class="label">Get in touch</p>
-      <div>
-        <h2>We are developing our offering and welcome conversations.</h2>
-        <p class="intro">We would like to hear from business leaders, security professionals, IT teams and organisations exploring AI adoption or research collaboration.</p>
       </div>
     </section>
 
@@ -283,22 +250,26 @@ footer p { max-width: 46em; }
       <p class="label">Contact</p>
       <div>
         <h2>Message us to discuss your AI adoption, automation and security requirements.</h2>
+        <p class="intro">We are currently developing our service offering and welcome conversations with business leaders, security professionals, IT teams and organisations exploring AI adoption or research collaboration.</p>
         <dl>
           <div><dt>Email</dt><dd><a href="mailto:boundverity@gmail.com">boundverity@gmail.com</a></dd></div>
-          <div><dt>Telephone</dt><dd><a href="tel:+447386163333">+44 7386 163333</a></dd></div>
+          <div><dt>Telephone</dt><dd>+44 7386 163333</dd></div>
+          <div><dt>Contact</dt><dd>Muhammed Colley, Managing Director</dd></div>
           <div><dt>Registered office</dt><dd>13 Otterburn Court, Fourth St, Gateshead NE8 2UN</dd></div>
+          <div><dt>Follow us</dt><dd><ul class="social">
+            <li><a href="https://www.instagram.com/REPLACE-WITH-YOUR-HANDLE/" target="_blank" rel="noopener noreferrer" aria-label="Boundverity on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/company/REPLACE-WITH-YOUR-PAGE/" target="_blank" rel="noopener noreferrer" aria-label="Boundverity on LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V16"/><circle cx="8" cy="7.6" r="0.6" fill="currentColor"/><path d="M12 16v-5.5m0 2.5c0-1.4 1.1-2.5 2.5-2.5S17 11.6 17 13v3"/></svg></a></li>
+            <li><a href="https://www.tiktok.com/@REPLACE-WITH-YOUR-HANDLE" target="_blank" rel="noopener noreferrer" aria-label="Boundverity on TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.3 2.4 1.9 4.2 4.5 4.5"/></svg></a></li>
+          </ul></dd></div>
         </dl>
-        <div class="actions">
-          <a class="pill" href="mailto:boundverity@gmail.com">Email us <span aria-hidden="true">→</span></a>
-          <a class="pill ghost" href="tel:+447386163333">Call us</a>
-        </div>
+        <a class="pill" href="mailto:boundverity@gmail.com">Message us <span aria-hidden="true">→</span></a>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>Boundverity Technologies Ltd. A private company limited by shares, registered in England and Wales, company number 17516762. Registered office: 13 Otterburn Court, Fourth St, Gateshead NE8 2UN.</p>
-    <p>© 2026 Boundverity Technologies Ltd</p>
+    <p>Boundverity Technologies Ltd. A private company limited by shares, registered in England and Wales. Registered office: 13 Otterburn Court, Fourth St, Gateshead NE8 2UN.</p>
+    <div><p>© 2026 Boundverity Technologies Ltd</p></div>
   </footer>
 </div>
 
@@ -315,19 +286,11 @@ footer p { max-width: 46em; }
   // Safety net: nothing stays hidden.
   setTimeout(function () { document.querySelectorAll('[data-anim]').forEach(function (n) { n.classList.add('in'); }); }, 1800);
 
-  // Mobile menu
-  var btn = document.getElementById('menu-btn'), nav = document.getElementById('nav');
-  function setMenu(open) { nav.classList.toggle('open', open); btn.setAttribute('aria-expanded', open ? 'true' : 'false'); btn.textContent = open ? 'Close' : 'Menu'; }
-  btn.addEventListener('click', function () { setMenu(!nav.classList.contains('open')); });
-  nav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
-  window.addEventListener('resize', function () { if (window.innerWidth > 960) setMenu(false); });
-
   // Halftone field
   var c = document.getElementById('field');
   if (!c || !c.getContext) return;
   var ctx = c.getContext('2d');
-  var w = 0, h = 0, dpr = 1, px = 0, py = 0, tx = 0, ty = 0, last = 0, visible = true;
+  var w = 0, h = 0, dpr = 1, px = 0, py = 0, tx = 0, ty = 0, last = 0;
 
   function hash(x, y) { var s = Math.sin(x * 127.1 + y * 311.7) * 43758.5453; return s - Math.floor(s); }
   function smooth(t) { return t * t * (3 - 2 * t); }
@@ -342,8 +305,8 @@ footer p { max-width: 46em; }
 
   function resize() {
     var r = c.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
     w = r.width; h = r.height;
-    dpr = Math.min(window.devicePixelRatio || 1, w < 700 ? 1.5 : 2);
     c.width = Math.max(1, Math.round(w * dpr)); c.height = Math.max(1, Math.round(h * dpr));
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     draw(last);
@@ -351,7 +314,7 @@ footer p { max-width: 46em; }
 
   function draw(t) {
     ctx.clearRect(0, 0, w, h);
-    var step = 6;
+    var step = w < 480 ? 5 : 6;
     var drift = t * 0.00004;
     var ox = Math.cos(drift) * 0.9 + px * 0.25, oy = Math.sin(drift) * 0.9 + py * 0.25;
     for (var y = step / 2; y < h; y += step) {
@@ -373,7 +336,7 @@ footer p { max-width: 46em; }
   }
 
   function loop(t) {
-    if (visible && !document.hidden && t - last > (w < 700 ? 50 : 33)) {
+    if (t - last > 33) {
       px += (tx - px) * 0.05; py += (ty - py) * 0.05;
       last = t; draw(t);
     }
@@ -387,9 +350,6 @@ footer p { max-width: 46em; }
       var r = c.getBoundingClientRect();
       tx = (e.clientX - r.left) / r.width - 0.5; ty = (e.clientY - r.top) / r.height - 0.5;
     });
-    if ('IntersectionObserver' in window) {
-      new IntersectionObserver(function (en) { visible = en[0].isIntersecting; }).observe(c);
-    }
     requestAnimationFrame(loop);
   }
 })();
