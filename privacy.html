@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy notice | Boundverity</title>
+<meta name="description" content="How Boundverity Technologies Ltd collects and uses personal data through its website and enquiries.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap">
+<style>
+/* Same design tokens and base styles as index.html */
+:root {
+  --accent: #EA580C;
+  --accent-deep: #B53C00;
+  --ink: #0A0A0A;
+  --body: #525252;
+  --muted: #737373;
+  --line: #E7E5E4;
+  --bg: #FFFFFF;
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+img { max-width: 100%; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--body);
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.65;
+  padding-block: 20px 0;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 1280px; margin: 0 auto; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.label { font-size: 12px; line-height: 20px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 400; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 300; color: var(--ink); letter-spacing: -0.025em; text-wrap: balance; margin: 0; }
+p { margin: 0; }
+
+.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 8px 20px; border-bottom: 1px solid var(--line); }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand img { width: 34px; height: auto; display: block; }
+.brand span { font-family: var(--serif); font-size: 26px; font-weight: 300; letter-spacing: -0.02em; color: var(--ink); }
+.pill { display: inline-flex; align-items: center; gap: 10px; background: var(--accent); color: #fff; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 400; text-decoration: none; padding: 11px 20px; border-radius: 9999px; transition: background 150ms ease; }
+.pill:hover { background: var(--accent-deep); }
+
+/* Legal page layout */
+.doc-head { padding-block: 48px 40px; }
+.doc-head h1 { font-size: 36px; line-height: 40px; margin-top: 16px; max-width: 18em; }
+.doc-head .updated { margin-top: 16px; }
+.doc-head .summary { margin-top: 20px; max-width: 40em; }
+section.row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3fr); gap: 32px; padding-block: 48px 64px; border-top: 1px solid var(--line); }
+.row > .label { padding-top: 6px; }
+.toc { margin: 12px 0 0; padding: 0; list-style: none; position: sticky; top: 16px; }
+.toc li { margin-top: 8px; }
+.toc a { font-size: 13px; text-decoration: none; color: var(--muted); transition: color 150ms ease; }
+.toc a:hover { color: var(--ink); }
+.doc-body { min-width: 0; }
+.doc-body h2 { font-size: 26px; line-height: 30px; letter-spacing: -0.02em; margin: 44px 0 0; scroll-margin-top: 16px; }
+.doc-body h2:first-child { margin-top: 0; }
+.doc-body p, .doc-body ul { margin-top: 14px; max-width: 46em; }
+.doc-body ul { padding-left: 20px; }
+.doc-body li { margin-top: 6px; }
+.doc-body a { text-decoration-color: var(--accent); text-underline-offset: 3px; }
+.doc-body strong { font-weight: 400; color: var(--ink); }
+dl.parts { margin: 20px 0 0; display: grid; gap: 0; max-width: 52em; }
+dl.parts > div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 24px; padding-block: 14px; border-top: 1px solid var(--line); }
+dl.parts dt { color: var(--ink); font-weight: 400; }
+dl.parts dd { margin: 0; }
+.note { background: #FAF7F5; padding: 20px 24px; margin-top: 20px; max-width: 46em; }
+
+footer { border-top: 1px solid var(--line); padding-block: 32px 40px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px 40px; font-size: 13px; color: var(--muted); }
+footer p { max-width: 46em; }
+/* Footer additions */
+footer .foot-links { display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: center; }
+footer .foot-links a { text-decoration: none; transition: color 150ms ease; }
+footer .foot-links a:hover, footer p a:hover { color: var(--ink); }
+footer .foot-links a[aria-current="page"] { color: var(--ink); }
+footer .foot-legal { flex-basis: 100%; max-width: none; }
+footer .foot-contact { flex-basis: 100%; max-width: none; }
+footer .foot-contact a { color: var(--ink); text-decoration: none; }
+footer .foot-contact a:hover { color: var(--accent); }
+footer .social { align-items: center; }
+
+/* Social icons */
+.social { display: flex; flex-wrap: wrap; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.social a { width: 40px; height: 40px; border: 1px solid #D4D4D4; border-radius: 9999px; display: inline-flex; align-items: center; justify-content: center; color: var(--ink); transition: color 150ms ease, border-color 150ms ease, background 150ms ease; }
+.social a:hover { color: #fff; background: var(--accent); border-color: var(--accent); }
+.social svg { width: 18px; height: 18px; display: block; }
+footer .social a { width: 36px; height: 36px; }
+
+@media (max-width: 960px) {
+  section.row { grid-template-columns: minmax(0, 1fr); gap: 16px; padding-block: 36px 48px; }
+  .toc { position: static; display: flex; flex-wrap: wrap; gap: 4px 20px; }
+  .toc li { margin-top: 0; }
+  dl.parts > div { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+}
+@media (max-width: 520px) {
+  .brand span { font-size: 22px; }
+  .doc-head { padding-block: 32px 28px; }
+  .doc-head h1 { font-size: 30px; line-height: 34px; }
+  .pill { padding: 10px 16px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="index.html" aria-label="Boundverity home">
+      <img src="logo.png" alt="" width="34" height="33">
+      <span>Boundverity</span>
+    </a>
+    <a class="pill" href="index.html"><span aria-hidden="true">←</span> Back to home</a>
+  </header>
+
+  <main id="top">
+    <div class="doc-head">
+      <p class="label">Legal</p>
+      <h1>Privacy notice</h1>
+      <p class="label updated">Last updated 26 October 2026</p>
+      <p class="summary">This notice explains what personal data Boundverity Technologies Ltd collects through this website and when you contact us, why we use it, who we share it with, and your rights.</p>
+    </div>
+
+    <section class="row">
+      <div>
+        <p class="label">Contents</p>
+        <ul class="toc">
+          <li><a href="#who">Who we are</a></li>
+          <li><a href="#collect">What we collect</a></li>
+          <li><a href="#use">How and why we use it</a></li>
+          <li><a href="#share">Who we share it with</a></li>
+          <li><a href="#transfers">International transfers</a></li>
+          <li><a href="#keep">How long we keep it</a></li>
+          <li><a href="#rights">Your rights</a></li>
+          <li><a href="#cookies">Cookies and tracking</a></li>
+          <li><a href="#links">Other websites</a></li>
+          <li><a href="#changes">Changes</a></li>
+        </ul>
+      </div>
+      <div class="doc-body">
+        <h2 id="who">Who we are</h2>
+        <p>Boundverity Technologies Ltd (“Boundverity”, “we”, “us”) is a company registered in England and Wales, company number 17516762. Our registered office is 13 Otterburn Court, Fourth St, Gateshead NE8 2UN.</p>
+        <p>We are the “controller” of the personal data described in this notice, which means we decide how and why it is used. For any question about this notice or your data, email <a href="mailto:boundverity@gmail.com">boundverity@gmail.com</a>.</p>
+
+        <h2 id="collect">What we collect</h2>
+        <p><strong>When you send an enquiry through our form</strong>, we receive your name, work email address, organisation, role (if you give it), the service area you are interested in, where you are with AI adoption, your message, and a record that you ticked the consent box.</p>
+        <p><strong>When you email, call or book a call with us</strong>, we receive your contact details, the content of your messages, and any information you give us on the booking page, such as your name, email address, chosen time and answers to any questions it asks.</p>
+        <p><strong>When you visit this website</strong>, the services that deliver it (see “Who we share it with”) receive technical information that is a normal part of loading any web page, such as your IP address, browser type, device type and the pages requested. We do not run analytics on this website and do not receive a profile of your visit.</p>
+        <p>Please do not send us credentials, client data, other people’s personal data or system diagrams through the form or in early messages. We only need a description of your situation at this stage.</p>
+        <p>We do not knowingly collect special category data (such as health information) or data about children, and this website is aimed at businesses.</p>
+
+        <h2 id="use">How and why we use it</h2>
+        <p>We only use your personal data where the law gives us a lawful basis to do so:</p>
+        <dl class="parts">
+          <div><dt>To reply to your enquiry, arrange and hold a call, and discuss whether we can help</dt><dd>Legitimate interests (responding to people who contact us about our services), or taking steps at your request before entering into a contract.</dd></div>
+          <div><dt>To keep a record of our conversations and, if we work together, to deliver and administer the work</dt><dd>Legitimate interests, performance of a contract, and legal obligations such as accounting and tax record-keeping.</dd></div>
+          <div><dt>To keep this website and our systems secure and working</dt><dd>Legitimate interests (protecting our website and business from misuse).</dd></div>
+          <div><dt>To respond to your rights requests or complaints, or to deal with legal claims</dt><dd>Legal obligation and legitimate interests.</dd></div>
+        </dl>
+        <p>Where we rely on legitimate interests, we have considered whether they are outweighed by your rights and interests, and you can object (see “Your rights”). We do not add you to a mailing list because you made an enquiry. We do not sell your data and we do not make decisions about you using automated processing.</p>
+
+        <h2 id="share">Who we share it with</h2>
+        <p>We use a small number of service providers who handle data on our behalf, only for the purposes described above:</p>
+        <ul>
+          <li><strong>Web3Forms</strong>, which processes our enquiry form and delivers each submission to our inbox.</li>
+          <li><strong>Our email provider (Google, for Gmail)</strong>, where emails and form notifications are received and stored.</li>
+          <li><strong>Our scheduling provider</strong>, if you book a call through the booking page. <!-- UPDATE: name your booking tool here once chosen, e.g. Cal.com --></li>
+          <li><strong>GitHub (GitHub Pages)</strong>, which hosts this website and therefore sees the technical information involved in serving pages.</li>
+          <li><strong>Google Fonts</strong>, which supplies the typefaces used on this site and therefore receives your IP address when the page loads.</li>
+        </ul>
+        <p>We may also share information with professional advisers, insurers, or authorities where we are required to by law or need it to establish or defend legal claims.</p>
+
+        <h2 id="transfers">International transfers</h2>
+        <p>Some of these providers are based outside the UK, including in the United States, or may process data there. Where personal data is transferred outside the UK, we expect it to be protected by a safeguard recognised under UK data protection law, such as an adequacy decision or standard contractual clauses with the UK addendum. You can ask us for more information using the email address above.</p>
+
+        <h2 id="keep">How long we keep it</h2>
+        <ul>
+          <li><strong>Enquiries that do not lead to work:</strong> up to 12 months after our last contact, then deleted.</li>
+          <li><strong>If we work together:</strong> for as long as needed to deliver the work, and afterwards for as long as legal, tax or accounting obligations require.</li>
+          <li><strong>Booking records:</strong> deleted when we delete the related enquiry, or earlier if you ask.</li>
+          <li><strong>Rights requests and complaints:</strong> for as long as needed to show we handled them properly.</li>
+        </ul>
+        <p>Technical data held by our hosting and font providers is kept according to their own policies.</p>
+
+        <h2 id="rights">Your rights</h2>
+        <p>Under UK data protection law you have the right to:</p>
+        <ul>
+          <li>be told how your data is used, and ask for a copy of it;</li>
+          <li>ask us to correct data that is wrong or incomplete;</li>
+          <li>ask us to erase your data in certain circumstances;</li>
+          <li>ask us to restrict how we use your data in certain circumstances;</li>
+          <li>object to us using your data where we rely on legitimate interests;</li>
+          <li>ask for data you gave us to be provided in a portable format, where it applies; and</li>
+          <li>withdraw consent where we rely on it, which does not affect earlier use.</li>
+        </ul>
+        <p>To use any of these rights, email <a href="mailto:boundverity@gmail.com">boundverity@gmail.com</a>. We normally respond within one month and do not charge a fee. We may need to confirm who you are first.</p>
+        <div class="note">
+          <p style="margin-top:0"><strong>Complaints.</strong> If you are unhappy with how we have handled your data, please tell us first so we can put it right. You also have the right to complain to the Information Commissioner’s Office (ICO) at <a href="https://ico.org.uk/make-a-complaint/" target="_blank" rel="noopener noreferrer">ico.org.uk/make-a-complaint</a>, or by telephone on 0303 123 1113.</p>
+        </div>
+
+        <h2 id="cookies">Cookies and tracking</h2>
+        <p>This website does not use cookies for analytics or advertising, and we do not use tracking tools. Third-party services you choose to use from this site, such as a booking page, may set their own cookies under their own policies. Links to social networks and GitHub take you to those sites, which have their own privacy practices.</p>
+
+        <h2 id="links">Other websites</h2>
+        <p>Our pages link to external sites, including Instagram, LinkedIn, TikTok and GitHub. We are not responsible for their content or how they handle your data, so please read their privacy notices.</p>
+
+        <h2 id="changes">Changes to this notice</h2>
+        <p>We may update this notice, for example if we change a service provider. The date at the top shows when it was last updated. Significant changes will be made clear on this page.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <nav class="foot-links" aria-label="Site information">
+      <a href="privacy.html" aria-current="page">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <ul class="social">
+      <li><a href="https://www.instagram.com/boundverity/" target="_blank" rel="noopener noreferrer" aria-label="Boundverity on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg></a></li>
+      <li><a href="https://www.linkedin.com/company/boundverity/" target="_blank" rel="noopener noreferrer" aria-label="Boundverity on LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V16"/><circle cx="8" cy="7.6" r="0.6" fill="currentColor"/><path d="M12 16v-5.5m0 2.5c0-1.4 1.1-2.5 2.5-2.5S17 11.6 17 13v3"/></svg></a></li>
+      <li><a href="https://www.tiktok.com/@boundverity" target="_blank" rel="noopener noreferrer" aria-label="Boundverity on TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.3 2.4 1.9 4.2 4.5 4.5"/></svg></a></li>
+      <li><a href="https://github.com/Boundverity" target="_blank" rel="noopener noreferrer" aria-label="Boundverity on GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a></li>
+    </ul>
+    <p class="foot-contact"><a href="mailto:boundverity@gmail.com">boundverity@gmail.com</a><span aria-hidden="true"> · </span><a href="tel:+447386163333">+44 7386 163333</a></p>
+    <p class="foot-legal">Boundverity Technologies Ltd · Registered in England and Wales, company number 17516762 · Registered office: 13 Otterburn Court, Fourth St, Gateshead NE8 2UN</p>
+    <p>Enquiries are handled under UK data protection law. <a href="privacy.html">Privacy notice</a></p>
+    <p>© 2026 Boundverity Technologies Ltd</p>
+  </footer>
+</div>
+</body>
+</html>
